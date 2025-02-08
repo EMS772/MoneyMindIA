@@ -1,0 +1,67 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyMind - Registro</title>
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <!-- Logo y Título -->
+            <div class="register-header">
+                <img src="https://firebasestorage.googleapis.com/v0/b/twecommerce-14b8f.appspot.com/o/MoneyMind%2FLogoMMB.png?alt=media&token=00a7e6ed-6c8b-4481-9c30-dc228f2a771b" alt="MoneyMind Logo" class="log">
+                <h1>Regístrate en MoneyMind</h1>
+                <p class="subtitle">Crea tu cuenta para empezar a gestionar tus finanzas</p>
+            </div>
+
+            <!-- Formulario de Registro -->
+            <form id="registerForm" class="register-form">
+                <div class="input-group">
+                    <label for="fullname">Nombre completo</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Crea una contraseña segura" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirmar contraseña</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Repite tu contraseña" required>
+                </div>
+                <button type="submit" class="register-button">
+                    <i class="fas fa-user-plus"></i>
+                    Crear Cuenta
+                </button>
+            </form>
+
+            <!-- Separador -->
+            <div class="separator">
+                <span>o</span>
+            </div>
+
+            <!-- Botón de Google -->
+            <button class="google-login">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google Logo" class="google-logo">
+                Registrarse con Google
+            </button>
+
+            <!-- Enlace de Inicio de Sesión -->
+            <p class="login-link">
+                ¿Ya tienes una cuenta? <a href="@Url.Action("Login", "Home")">Inicia sesión aquí</a>
+            </p>
+        </div>
+    </div>
+    <script src="../assets/js/register.js"></script>
+</body>
+</html>

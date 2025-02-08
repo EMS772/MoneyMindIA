@@ -1,0 +1,76 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<header class="header">
+    <div class="balance-card">
+        <span class="balance-label">Balance Total</span>
+        <span class="balance-amount">$7,875</span>
+        <div class="balance-change">
+            <i class="fas fa-arrow-up"></i>
+            <span>+2.5% este mes</span>
+        </div>
+    </div>
+</header>
+
+<!-- Transactions Section -->
+<section class="transactions">
+    <div class="section-header">
+        <h2>Gastos e Ingresos</h2>
+        <button class="btn-filter">
+            <i class="fas fa-filter"></i>
+            Filtrar
+        </button>
+    </div>
+    <div class="transactions-list">
+        <!-- Transactions will be added dynamically -->
+        <div class="empty-state">
+            <i class="fas fa-coins"></i>
+            <p>No hay transacciones recientes</p>
+        </div>
+    </div>
+</section>
+
+<!-- Goals Section -->
+<section class="goals">
+    <div class="goals-list">
+        <div class="section-header">
+            <h2>Metas Financieras</h2>
+            <button class="btn-primary">
+                <i class="fas fa-plus"></i>
+                Nueva Meta
+            </button>
+        </div>
+        <!-- Goals will be added dynamically -->
+        <div class="empty-state">
+            <i class="fas fa-bullseye"></i>
+            <p>No tienes metas activas</p>
+        </div>
+    </div>
+
+    <!-- Add Goal Form -->
+    <div class="add-goal">
+        <h3>Crea una Nueva Meta</h3>
+        <p class="subtext">Define tus objetivos financieros y alcanza tus sueños</p>
+        <form id="goalForm" class="goal-form">
+            <div class="form-group">
+                <label for="goalName">Nombre de la Meta</label>
+                <input type="text" id="goalName" placeholder="Ej: Ahorro para vacaciones" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="startDate">Fecha Inicio</label>
+                    <input type="date" id="startDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="endDate">Fecha Límite</label>
+                    <input type="date" id="endDate" required>
+                </div>
+            </div>
+            <button type="submit" class="btn-primary">
+                <i class="fas fa-check"></i>
+                Crear Meta
+            </button>
+        </form>
+    </div>
+</section>
